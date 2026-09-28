@@ -15,62 +15,90 @@ html{
     /* Colors */
     --color-green--500: hsl(158, 36%, 37%);
     --color-green--700: hsl(158, 42%, 18%);
-    
-    --color-black-: hsl(212, 21%, 14%);
+    --color-black: hsl(212, 21%, 14%);
     --color-grey: hsl(228, 12%, 48%);
     --color-cream: hsl(30, 38%, 92%);
     --color-white: hsl(0, 0%, 100%);
 
-   
     /* Typography */
-    --font-family-heading: "Fraunces",  serif;
-    --font-family-body: "Montserrat", sans-serif; 
+    --font-family-heading: "Fraunces", serif;
+    --font-family-body: "Montserrat", sans-serif;
 }
 
 body{
     min-height: 100dvh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem;
+    padding: 2rem;
     background-color: var(--color-cream);
     font-family: var(--font-family-body);
+         @media only screen and (min-width:43.75em){
+          padding: 0;
+      }
 }
 
 .product__wrapper{
     background-color: var(--color-white);
     overflow: hidden;
     border-radius: .8rem;
+    max-width: 37.5rem;
+    width: 100%;
+    @media only screen and (min-width:43.75em){
+    display: flex;
+    flex-direction: row;
+    max-width: 70rem;
+}
 }
 
 .product__image{
     width: 100%;
+    display: block;
 }
 
 .product__card{
     padding: 1.8rem;
+    @media only screen and (min-width:43.75em){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+     flex: 0 0 50%;
+       padding: 2.2rem;
+}
 }
 
 .product__title{
   font-size: 1.1rem;
-  text-transform:  uppercase;
+  text-transform: uppercase;
   letter-spacing: .3rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   color: var(--color-grey);
+      @media only screen and (min-width:43.75em){
+          font-size: 1.5rem;
+      }
+  
 }
 
 .product__name{
     font-size: 2.8rem;
     font-family: var(--font-family-heading);
     margin-bottom: 1.5rem;
+    color: var(--color-black);
+      @media only screen and (min-width:43.75em){
+          font-size: 3.6rem;
+      }
 }
 
 .product__details{
-   color: var(--color-grey);
+   color: var(--color-black);
    font-size: 1.3rem;
    line-height: 1.5;
-    font-weight: 500;
+   font-weight: 500;
+        @media only screen and (min-width:43.75em){
+          font-size: 1.5rem;
+      }
 }
 
 .product__price-box{
@@ -106,9 +134,7 @@ body{
       align-items: center;
       justify-content: center;
       background-color: var(--color-green--500);
-     cursor: pointer;
-     transition: background-color 0.3s ease, transform 0.1s;
-
+      transition: background-color 0.3s ease, transform 0.1s;
 }
 
 .product__btn:active {
@@ -116,3 +142,23 @@ body{
     background-color: var(--color-green--700);
 }
 
+@media (hover: hover) {
+  .product__btn:hover {
+    background-color: var(--color-green--700);
+    cursor: pointer;
+  }
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 4rem;
+  color: hsl(228, 45%, 44%);
+   @media only screen and (min-width:43.75em){
+     font-size: 1.5rem;
+}
+}
+
+.attribution a {
+  color: inherit;
+}
