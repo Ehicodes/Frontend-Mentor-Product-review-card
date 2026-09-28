@@ -19,6 +19,7 @@ html{
     --color-grey: hsl(228, 12%, 48%);
     --color-cream: hsl(30, 38%, 92%);
     --color-white: hsl(0, 0%, 100%);
+    --color-blue: hsl(228, 45%, 44%);
 
     /* Typography */
     --font-family-heading: "Fraunces", serif;
@@ -153,7 +154,7 @@ body{
   font-size: 1rem;
   text-align: center;
   margin-top: 4rem;
-  color: hsl(228, 45%, 44%);
+  color: var(--color-blue);
    @media only screen and (min-width:43.75em){
      font-size: 1.5rem;
 }
