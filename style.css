@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*10px/16px = 62.5. 1rem = 10px */
+}
+
+:root {
+    /* Colors */
+    --color-green--500: hsl(158, 36%, 37%);
+    --color-green--700: hsl(158, 42%, 18%);
+    
+    --color-black-: hsl(212, 21%, 14%);
+    --color-grey: hsl(228, 12%, 48%);
+    --color-cream: hsl(30, 38%, 92%);
+    --color-white: hsl(0, 0%, 100%);
+
+   
+    /* Typography */
+    --font-family-heading: "Fraunces",  serif;
+    --font-family-body: "Montserrat", sans-serif; 
+}
+
+body{
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: var(--color-cream);
+    font-family: var(--font-family-body);
+}
+
+.product__wrapper{
+    background-color: var(--color-white);
+    overflow: hidden;
+    border-radius: .8rem;
+}
+
+.product__image{
+    width: 100%;
+}
+
+.product__card{
+    padding: 1.8rem;
+}
+
+.product__title{
+  font-size: 1.1rem;
+  text-transform:  uppercase;
+  letter-spacing: .3rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--color-grey);
+}
+
+.product__name{
+    font-size: 2.8rem;
+    font-family: var(--font-family-heading);
+    margin-bottom: 1.5rem;
+}
+
+.product__details{
+   color: var(--color-grey);
+   font-size: 1.3rem;
+   line-height: 1.5;
+    font-weight: 500;
+}
+
+.product__price-box{
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product__price-box span{
+    font-size: 1.2rem;
+    color: var(--color-grey);
+   text-decoration: line-through;
+}
+
+.product__price{
+    color: var(--color-green--500);
+    font-size: 3rem;
+   font-family: var(--font-family-heading);
+}
+
+.product__btn{
+      border: none;
+      padding: 1.5rem;
+      width: 100%;
+      font-size: 1.6rem;
+      font-family: var(--font-family-body);
+      font-weight: 500;
+      gap: 1rem;
+      color: var(--color-white);
+      border-radius: .8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-green--500);
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+}
+
+.product__btn:hover {
+    background-color: var(--color-green--700);
+}
+
+/* @media (min-width: 769px) {
+  .product__wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 680px;
+  }
+
+  .product__image {
+    flex: 1 1 50%;
+    object-fit: cover;
+  }
+
+  .product__card {
+    flex: 1 1 50%;
+    padding: 2rem;
+  }
+} */
