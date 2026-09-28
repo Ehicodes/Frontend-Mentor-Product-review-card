@@ -107,27 +107,12 @@ body{
       justify-content: center;
       background-color: var(--color-green--500);
      cursor: pointer;
-     transition: background-color 0.3s ease;
+     transition: background-color 0.3s ease, transform 0.1s;
+
 }
 
-.product__btn:hover {
+.product__btn:active {
+    transform: scale(0.97);
     background-color: var(--color-green--700);
 }
 
-/* @media (min-width: 769px) {
-  .product__wrapper {
-    display: flex;
-    flex-direction: row;
-    max-width: 680px;
-  }
-
-  .product__image {
-    flex: 1 1 50%;
-    object-fit: cover;
-  }
-
-  .product__card {
-    flex: 1 1 50%;
-    padding: 2rem;
-  }
-} */
